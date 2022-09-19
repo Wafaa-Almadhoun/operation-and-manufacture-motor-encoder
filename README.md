@@ -11,7 +11,9 @@
 
 ## Introduction
 This project is to operating and manufacture motor encoder for BLCD scooter Hub Motor Kit, 48V 350W Wheel 8 in 
-for calculate pulses per revolution وTo help determine the location of the robot and with additional sensors . 
+for calculate pulses per revolution وTo help determine the location of the robot and with additional sensors , click  [here](https://www.heidenhain.us/resources-and-news/types-of-encoders-and-applications/#:~:text=%20The%20Most%20Common%20Types%20of%20Encoders%20,counterpart%2C%20angle%20encoders%20measure%20rotation.%20These%2C...%20More%20)
+to know more about different types of encoders and their applications .
+
  ,We will cover several topics : 👍 
  1. single channel optical encoder .
  2. servo motor rotate 90 degrees and back to 0 degree after 3 sec .
