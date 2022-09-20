@@ -68,7 +68,7 @@ we need to add interrupter disk between the IR LED and photodiod the disk should
 
 ![interrupter disk ](https://user-images.githubusercontent.com/64277741/191324445-2ab75529-4655-47d4-bbac-13bd7eefb659.png)
 
-Figure (2): single channel encoder circuit
+Figure (2): single channel encoder circuit with interrupter disk with 28 channels .
 
 
 #### The Code 
@@ -252,7 +252,24 @@ delay(25);
 
 }
 `_
+##  3. Suggestions to build a special encoder .
+
+   at least two channels are cut out on the interrupter disk. Encoders with higher resolution requirements have multiple channels,
+   sometimes up to a dozen. The photodetector outputs a pulse of maximum voltage when light hits it and there is no voltage when
+   there is no light. Therefore, the output from the encoder will be digital signals. If the encoder has a single channel
+   interrupter disc, there is only a pair of output cables. 
+
+   A dual-channel interrupter disc has two sets of output cables. The number of output cables is twice the number of channels on the 
+   interrupter disk. The digital output is used to calculate speed, angular shift, and direction of the motor.
+
+so we need minimum 3 channel 
 
 
+![1-119](https://user-images.githubusercontent.com/64277741/191328132-a5b70b52-70e4-4f6d-bdff-aa78c7a3076c.jpg)
 
+ Figure (3): single channel encoder circuit with interrupter disk .
+ 
+ the interrupter disk need to desiend to install in BLDC shaft 
+ 
 
+  
