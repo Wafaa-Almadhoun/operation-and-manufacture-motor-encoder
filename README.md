@@ -271,5 +271,5 @@ so we need minimum 3 channel
  
  the interrupter disk need to desiend to install in BLDC shaft 
  
-
+ [here](https://www.cuidevices.com/product-spotlight/capacitive-incremental-encoders) is all the methods to get directional , position , speed and distance information for three channel encoder 
   
