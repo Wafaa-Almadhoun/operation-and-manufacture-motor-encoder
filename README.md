@@ -17,8 +17,8 @@ to know more about different types of encoders and their applications .
  ,We will cover several topics : 👍 
  
  1. single channel optical encoder .
- 2. servo motor rotate 90 degrees and back to 0 degree after 3 sec .
- 3. Suggestions to build a special encoder .
+ 2. DC motor with a built-in optical incremental rotary encoder .
+ 3. Suggestions to build a special encoder for our BLDC motor  .
 
 ## Technologies
 Project is created with:
@@ -35,6 +35,8 @@ Project is created with:
 5. 2 resistors 220 ,  3K ohm 
 6. bettrey  5 volt
 7.breadboard
+
+#### 2. DC motor with a built-in optical incremental rotary encoder .
 
 
 ## Connections
@@ -104,6 +106,28 @@ void right_wheel_pulse() {
 }
 
 
+
+     Compile the code by clicking the green checkmark in the upper-left of the IDE window.
+
+     Connect the Arduino board to your personal computer using the USB cord.
+
+     Load the code we just wrote to your Arduino board.
+
+     Now, follow the following steps in the image below.
+     
+               
+	       
+	       1- open the serial monitor .
+	       2- rotate the motor 360 degree .
+	       3- Arduino will record the number of pulses .
+	       
+	       
+	       When you open the Serial Monitor, the pulse count should be 0. 
+	       
+	       Using your hand, rotate the motor a complete 360-degree turn.
+
+               Here is the output. We can see the number of pulses generated. 
+     
 
 ### 2-servo motor rotate 90 degrees and back to 0 degree after 3 sec .[see here ](https://www.tinkercad.com/things/gbPPDKDpC4S-task-12-servo-motor-0-90/editel?sharecode=F5nGzvf_Q4hBc8hK6pDw1buUxTyYmv8P1hEopJZUgGc)
 ![1](https://user-images.githubusercontent.com/64277741/122786121-a5116f80-d2bc-11eb-9a95-e5d2b8a3b9ab.PNG)
