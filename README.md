@@ -64,6 +64,12 @@ Connect the kathod of the photodiod to the 3k ohm resistor then connect the anot
 
 Figure (1): single channel encoder circuit
 
+we need to add interrupter disk between the IR LED and photodiod the disk should fit with the BLDC shaft 
+
+![interrupter disk ](https://user-images.githubusercontent.com/64277741/191324445-2ab75529-4655-47d4-bbac-13bd7eefb659.png)
+
+Figure (2): single channel encoder circuit
+
 
 #### The Code 
 
