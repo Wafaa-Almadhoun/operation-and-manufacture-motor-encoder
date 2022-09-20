@@ -17,7 +17,7 @@ to know more about different types of encoders and their applications .
  ,We will cover several topics : 👍 
  
  1. single channel optical encoder .
- 2. DC motor with a built-in optical incremental rotary encoder .
+ 2. DC Gear motor with two-channel Hall effect encoder .
  3. Suggestions to build a special encoder for our BLDC motor  .
 
 ## Technologies
@@ -36,10 +36,16 @@ Project is created with:
 6. bettrey  5 volt
 7.breadboard
 
-#### 2. DC motor with a built-in optical incremental rotary encoder .
+#### 2. DC Gear motor with two-channel Hall effect encoder . 
 
+1. Arduino ANO
+2. DC Gear motor with two-channel Hall effect encoder [here](https://a.co/d/bWDbtmQ) 
+3. bettrey  5 volt
+3.breadboard
 
 ## Connections
+
+
 
 #### 1. single channel optical encoder .
 
@@ -56,6 +62,25 @@ Connect the kathod of the photodiod to the 3k ohm resistor then connect the anot
 
 Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the pin 2 in arduino 
 
+#### 2. DC Gear motor with two-channel Hall effect encoder .
+
+The Ground pin of the motor connects to GND of the Arduino.
+
+Encoder A (sometimes labeled C1) of the motor connects to pin 2 of the Arduino.
+
+Pin 2 of the Arduino will record every time there is a rising digital signal from Encoder A.
+
+Encoder B (sometimes labeled C2) of the motor connects to pin 4 of the Arduino. The signal that is read off pin 4 on
+
+the Arduino will determine if the motor is moving forward or in reverse. We’re not going to use this pin in this tutorial,
+
+but we will use it in a future tutorial
+
+The VCC pin of the motor connects to the 5V pin of the Arduino. This pin is responsible for providing power to the encoder.
+
+For this project, you don’t need to connect the motor pins (+ and – terminals) to anything since you will be
+
+turning the motor manually with your hand.
 
 
 ## Block diagram & simulation
@@ -71,6 +96,13 @@ we need to add interrupter disk between the IR LED and photodiod the disk should
 ![interrupter disk ](https://user-images.githubusercontent.com/64277741/191324445-2ab75529-4655-47d4-bbac-13bd7eefb659.png)
 
 Figure (2): single channel encoder circuit with interrupter disk with 28 channels .
+
+#### 2. DC Gear motor with two-channel Hall effect encoder .
+  to see the circuit in Tinkercad click  [here](https://www.tinkercad.com/things/4VUspfQYDXj-powerful-densor/editel?tenant=circuits) 
+  
+![Powerful Densor](https://user-images.githubusercontent.com/64277741/191338523-2994b792-72df-47d7-8aef-ca62c6707b4b.png)
+
+Figure (3): DC Gear motor with two-channel Hall effect encoder 
 
 
 #### The Code 
@@ -129,11 +161,6 @@ void right_wheel_pulse() {
                Here is the output. We can see the number of pulses generated. 
      
 
-### 2-servo motor rotate 90 degrees and back to 0 degree after 3 sec .[see here ](https://www.tinkercad.com/things/gbPPDKDpC4S-task-12-servo-motor-0-90/editel?
-
-
-
-
 ##  3. Suggestions to build a special encoder .
 
    at least two channels are cut out on the interrupter disk. Encoders with higher resolution requirements have multiple channels,
@@ -149,7 +176,7 @@ so we need minimum 3 channel
 
 ![1-119](https://user-images.githubusercontent.com/64277741/191328132-a5b70b52-70e4-4f6d-bdff-aa78c7a3076c.jpg)
 
- Figure (3): single channel encoder circuit with interrupter disk .
+ Figure (4): single channel encoder circuit with interrupter disk .
  
  the interrupter disk need to desiend to install in BLDC shaft 
  
