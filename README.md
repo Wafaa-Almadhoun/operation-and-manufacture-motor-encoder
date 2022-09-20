@@ -15,9 +15,10 @@ for calculate pulses per revolution وTo help determine the location of the robo
 to know more about different types of encoders and their applications .
 
  ,We will cover several topics : 👍 
+ 
  1. single channel optical encoder .
  2. servo motor rotate 90 degrees and back to 0 degree after 3 sec .
- 3. Control multiple servo motors using Potentiometers .
+ 3. Suggestions to build a special encoder .
 
 ## Technologies
 Project is created with:
@@ -25,85 +26,49 @@ Project is created with:
 * AUTODESK TINKERCAD [Open](https://www.tinkercad.com/)
 	
 ## Components required
-1
 
+#### 1. single channel optical encoder .
 1. Arduino ANO
-2. 5 servo motors MG995
-3. jumper wirs
-4. 5 potentiometer 10 K ohm 
-5. bettrey  5 volt
-6.breadboard
-7.Gikfun Infrared Diode Led IR Emission and Receiver 
+2. IR LED (infrared light-emitting diode)[here](https://a.co/d/3mZR21J)
+3. IR photodiode (infrared light-receiver-diode) [here](https://a.co/d/3mZR21J)
+4. jumper wirs
+5. 2 resistors 220 ,  3K ohm 
+6. bettrey  5 volt
+7.breadboard
+
 
 ## Connections
-Connection pins:
 
-5V:  Power (red)
+#### 1. single channel optical encoder .
 
-Gnd: Ground (black)
 
-13,10,7,5,3 : Digital Signals (orange, yellow, green, blue, purple)
+Connect the 5v output of the Arduino to the positive rail of the breadboard
 
-A0,A1,A2,A3,A4 : Analog Signals (violet, brown, grey, cyan,pink)
+Connect the ground to the negative rail of the breadboard
+
+Connect the anod of the IR LED and photodiod the positive rail of the breadboard
+
+Connect the kathod of the IR LED to the 220 ohm resistor then connect the another leg to the negative rail of the breadboard
+
+Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the negative rail of the breadboard
+
+Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the pin 2 in arduino 
+
+
 
 ## Block diagram & simulation
-### 1-servo motor rotate 90 degrees . [see here](https://www.tinkercad.com/things/gbEAiV1jBww-task-12-/editel?sharecode=BJKBPih72RmLoE9rHIyFUbfSYzqZ60Z83fKnogQJ0Lg)
 
-![1](https://user-images.githubusercontent.com/64277741/122782880-c02eb000-d2b9-11eb-8eb7-d6fee3be6355.PNG)
-Figure (1): Servo Motor at initial value (0 degree
+ #### 1. single channel optical encoder .
 
-After 1 sec
-![1 2](https://user-images.githubusercontent.com/64277741/122783332-24ea0a80-d2ba-11eb-81ef-cee1f5e9950c.PNG)
-Figure (2): Servo Motor at 90 degrees 
+![i channel](https://user-images.githubusercontent.com/64277741/191320617-4da9e310-3383-420a-8a35-84d1dee577b1.png)
+
+Figure (1): single channel encoder circuit
+
 
 #### The Code 
-`#include <Servo.h> 
- 
-int servoPin = 3;
-int servoPin2 = 5;
-int servoPin3 = 7;
-int servoPin4= 10;
-int servoPin5= 13;
-
-
- Servo Servo1, Servo2, Servo3, Servo4, Servo5;
-void setup() { 
-   // We need to attach the servo to the used pin number 
-   Servo1.attach(servoPin); 
-Servo2.attach(servoPin2);
-Servo3.attach(servoPin3); 
-Servo4.attach(servoPin4);
-Servo5.attach(servoPin5); 
- 
-}
-void loop(){ 
-delay(1000); 
-  
-Servo1.write(90); 
-   
-Servo2.write(90); 
-    
-Servo3.write(90); 
-   
-
-Servo4.write(90); 
-
-
-Servo5.write(90); 
-  
-delay(1000);
-  
-Servo1.write(0);
-Servo2.write(0);
-Servo3.write(0);
-Servo4.write(0);
-Servo5.write(0);
 
 
 
-
-}
-`_
 
 ### 2-servo motor rotate 90 degrees and back to 0 degree after 3 sec .[see here ](https://www.tinkercad.com/things/gbPPDKDpC4S-task-12-servo-motor-0-90/editel?sharecode=F5nGzvf_Q4hBc8hK6pDw1buUxTyYmv8P1hEopJZUgGc)
 ![1](https://user-images.githubusercontent.com/64277741/122786121-a5116f80-d2bc-11eb-9a95-e5d2b8a3b9ab.PNG)
