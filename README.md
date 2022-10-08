@@ -50,37 +50,35 @@ Project is created with:
 #### 1. single channel optical encoder .
 
 
-Connect the 5v output of the Arduino to the positive rail of the breadboard
+     Connect the 5v output of the Arduino to the positive rail of the breadboard
 
-Connect the ground to the negative rail of the breadboard
+     Connect the ground to the negative rail of the breadboard
 
-Connect the anod of the IR LED and photodiod the positive rail of the breadboard
+     Connect the anod of the IR LED and photodiod the positive rail of the breadboard
 
-Connect the kathod of the IR LED to the 220 ohm resistor then connect the another leg to the negative rail of the breadboard
+     Connect the kathod of the IR LED to the 220 ohm resistor then connect the another leg to the negative rail of the breadboard
 
-Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the negative rail of the breadboard
+     Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the negative rail of the breadboard
 
-Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the pin 2 in arduino 
+     Connect the kathod of the photodiod to the 3k ohm resistor then connect the another leg to the pin 2 in arduino 
 
 #### 2. DC Gear motor with two-channel Hall effect encoder .
 
-The Ground pin of the motor connects to GND of the Arduino.
 
-Encoder A (sometimes labeled C1) of the motor connects to pin 2 of the Arduino.
 
-Pin 2 of the Arduino will record every time there is a rising digital signal from Encoder A.
+    The Ground pin of the motor connects to GND of the Arduino.
 
-Encoder B (sometimes labeled C2) of the motor connects to pin 4 of the Arduino. The signal that is read off pin 4 on
+    Encoder A (sometimes labeled C1) of the motor connects to pin 2 of the Arduino.
 
-the Arduino will determine if the motor is moving forward or in reverse. We’re not going to use this pin in this tutorial,
+    Pin 2 of the Arduino will record every time there is a rising digital signal from Encoder A.
 
-but we will use it in a future tutorial
+   Encoder B (sometimes labeled C2) of the motor connects to pin 4 of the Arduino. The signal that is read off pin 4 on
 
-The VCC pin of the motor connects to the 5V pin of the Arduino. This pin is responsible for providing power to the encoder.
+   The VCC pin of the motor connects to the 5V pin of the Arduino. This pin is responsible for providing power to the encoder.
 
-For this project, you don’t need to connect the motor pins (+ and – terminals) to anything since you will be
+   For this project, you don’t need to connect the motor pins (+ and – terminals) to anything since you will be
 
-turning the motor manually with your hand.
+   turning the motor manually with your hand.
 
 
 ## Block diagram & simulation
@@ -101,6 +99,8 @@ Figure (2): single channel encoder circuit with interrupter disk with 28 channel
   to see the circuit in Tinkercad click  [here](https://www.tinkercad.com/things/4VUspfQYDXj-powerful-densor/editel?tenant=circuits) 
   
 ![Powerful Densor](https://user-images.githubusercontent.com/64277741/191338523-2994b792-72df-47d7-8aef-ca62c6707b4b.png)
+
+
 
 Figure (3): DC Gear motor with two-channel Hall effect encoder 
 
